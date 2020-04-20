@@ -1,0 +1,128 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to bottom left, rgb(0, 0, 0), rgb(35, 35, 35));
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 550px;
+    width: 290px;
+    border: 3px solid rgb(6, 253, 138);
+    box-shadow: 0px 0px 10px rgb(6, 253, 138) inset, 0px 0px 20px rgb(6, 253, 138);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.contmelody{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 85%;
+    align-items: center;
+}
+
+.conteffect{
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    width: 85%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contbeat{
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    width: 85%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.melody {
+    display: flex;
+    height: 30%;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    -webkit-appearance: none;
+    background: linear-gradient(0deg, rgb(35, 35, 35), #000);
+    border-radius: 100px;
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
+.melody:checked{
+    background: linear-gradient(0deg,  rgb(2, 165, 89), rgb(6, 253, 138));
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+  }
+  
+.melody:before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(0deg, #000, #6b6b6b);
+    border-radius: 100px;
+    box-shadow: 0 0 0 1px #232323;
+    transform: scale(.98,.96);
+    transition:.4s;
+  }
+  
+.melody:checked:before {
+    left:60%;
+  }
+
+.effect{
+    background: rgb(30, 30, 30);
+    display: flex;
+    height: 90%;
+    width: 100%;
+    margin: 2%;
+    margin-top: 2%;
+    border: 2px solid rgb(253, 165, 2);
+    box-shadow: 0px 0px 15px rgb(30, 30, 30) inset, 0px 0px 10px rgb(253, 165, 2);
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+.effect:active{
+    transform: translateY(5px);
+    box-shadow: 0px 0px 35px rgb(253, 165, 2) inset, 0px 0px 20px rgb(253, 165, 2);
+}
+
+.beat{
+    background: rgb(30, 30, 30);
+    display: flex;
+    height: 80%;
+    width: 100%;
+    margin: 2%;
+    margin-bottom: 8px;
+    border: 2px solid rgb(6, 253, 138);
+    box-shadow: 0px 0px 15px rgb(30, 30, 30) inset, 0px 0px 10px rgb(6, 253, 138);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+.beat:active{
+    transform: translateY(5px);
+    box-shadow: 0px 0px 30px rgb(6, 253, 138) inset, 0px 0px 20px rgb(6, 253, 138);
+}

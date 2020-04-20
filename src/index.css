@@ -1,0 +1,38 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to bottom left, rgb(0, 0, 0), rgb(35, 35, 35));
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 150px;
+    width: 150px;
+    border: 3px solid rgb(6, 253, 138);
+    box-shadow: 0px 0px 10px rgb(6, 253, 138) inset, 0px 0px 20px rgb(6, 253, 138);
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 3s;
+    overflow: hidden;
+    outline: none;
+}
+
+.start:hover{
+    box-shadow: 0px 0px 30px rgb(6, 253, 138) inset, 0px 0px 60px rgb(6, 253, 138);
+    transition: 0.2s;
+}
+
+.start:active{
+    transform: translateY(30px);
+}
